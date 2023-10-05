@@ -4,7 +4,7 @@
 # In[1]:
 
 
-import random # генератор случайных чисел
+import random 
  
 def print_board(board): # вывести игровое поле на экран
     for row in board:
