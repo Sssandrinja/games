@@ -6,7 +6,7 @@
 
 import random 
  
-def print_board(board): # вывести игровое поле на экран
+def print_board(board): # создание игрового поля
     for row in board:
         print(" ".join(row)) # записать через пробел элементы строк 
  
@@ -24,7 +24,7 @@ movesLn = ["8", "7", "6", "5", "4", "3", "2", "1"] # обозначения ли
 0 - пуговицы
 """
  
-board = [[random.choice(["#", "0"]) for i in range(8)] for j in range(8)] # на экран выводится игровое поле со случайным расположением пуговиц и крестов
+board = [[random.choice(["#", "0"]) for i in range(8)] for j in range(8)] # создание игрового поля со случайным расположением пуговиц и крестов
  
  
 # print(board) # ПРОВЕРКА
@@ -66,7 +66,7 @@ while True: # != True:
                 if board[i][stolbik_index] == "0": # если всё еще там есть пуговицы, то они заменятся на кресты
                     # print("YEEI")
                     board[i][stolbik_index] = "#"
-            # проверка на то пустая ли линия при ходе не реализована
+           
             
         elif move in movesLn: # игрок ходит по строкам 
             line_index = movesLn.index(move)
@@ -87,7 +87,7 @@ while True: # != True:
                 if board[i][stolbik_index] == "0":
                     # print("YEEI")
                     board[i][stolbik_index] = "#"
-            # проверка на то пустая ли линия при ходе не реализована
+          
             
         elif move in movesLn:
             line_index = movesLn.index(move)
